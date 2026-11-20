@@ -3,7 +3,7 @@ import Foundation
 /// Settings shared between the app and the widget extension through the App Group.
 /// The bug design lives here, on the phone. It is never sent to the server.
 enum SharedSettings {
-    static let appGroup = "group.com.example.scorebug"
+    static let appGroup = "group.com.jeffmchale.scorebug"
     static let defaults = UserDefaults(suiteName: appGroup) ?? .standard
 
     static var serverURL: String {

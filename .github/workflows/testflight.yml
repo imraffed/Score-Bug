@@ -1,0 +1,48 @@
+# Signs the app with the App Store Connect API key and uploads it to TestFlight.
+# Run it by hand from the Actions tab. Needs three repository secrets:
+# ASC_KEY_ID, ASC_ISSUER_ID and ASC_KEY_P8 (the full text of the .p8 file).
+name: TestFlight
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  release:
+    runs-on: macos-15
+    timeout-minutes: 30
+    env:
+      ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+      ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+      ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check secrets
+        run: |
+          for name in ASC_KEY_ID ASC_ISSUER_ID ASC_KEY_P8; do
+            if [ -z "${!name}" ]; then echo "::error::Repository secret $name is not set."; exit 1; fi
+          done
+      - name: Generate Xcode project
+        run: |
+          brew install xcodegen
+          cd ios && xcodegen
+      - name: Archive and upload
+        run: |
+          cd ios
+          umask 077
+          KEY="$RUNNER_TEMP/AuthKey_${ASC_KEY_ID}.p8"
+          printf '%s\n' "$ASC_KEY_P8" > "$KEY"
+          trap 'rm -f "$KEY"' EXIT
+          AUTH=(-allowProvisioningUpdates -authenticationKeyPath "$KEY" -authenticationKeyID "$ASC_KEY_ID" -authenticationKeyIssuerID "$ASC_ISSUER_ID")
+          run() {
+            local log="$1"; shift
+            local status=0
+            "$@" > "$log" 2>&1 || status=$?
+            grep -E "error:|ARCHIVE SUCCEEDED|ARCHIVE FAILED|EXPORT SUCCEEDED|EXPORT FAILED|Upload succeeded" "$log" | sort -u || true
+            if [ "$status" -ne 0 ]; then tail -n 60 "$log"; fi
+            return $status
+          }
+          run archive.log xcodebuild -project ScoreBug.xcodeproj -scheme ScoreBug -configuration Release \
+            -destination 'generic/platform=iOS' -archivePath build/ScoreBug.xcarchive \
+            CURRENT_PROJECT_VERSION="${{ github.run_number }}" "${AUTH[@]}" archive
+          run export.log xcodebuild -exportArchive -archivePath build/ScoreBug.xcarchive \
+            -exportOptionsPlist ExportOptions.plist -exportPath build/export "${AUTH[@]}"

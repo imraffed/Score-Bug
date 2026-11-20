@@ -1,18 +1,19 @@
 # Generate the Xcode project with:  brew install xcodegen && xcodegen
-# Before running on a real phone, replace com.example.scorebug everywhere in this
-# file and in Shared/SharedSettings.swift with your own bundle ID, and set your team.
+# The bundle ID also appears in Shared/SharedSettings.swift (App Group) and
+# ExportOptions.plist; change all three together.
 name: ScoreBug
 options:
-  bundleIdPrefix: com.example
+  bundleIdPrefix: com.jeffmchale
   deploymentTarget:
     iOS: "17.2"
 settings:
   base:
     SWIFT_VERSION: "5.9"
-    DEVELOPMENT_TEAM: ""
+    DEVELOPMENT_TEAM: DXRJBMCTRX
+    CODE_SIGN_STYLE: Automatic
     MARKETING_VERSION: "0.1.0"
     CURRENT_PROJECT_VERSION: "1"
-    TARGETED_DEVICE_FAMILY: "1"
+    TARGETED_DEVICE_FAMILY: "1,2"
 targets:
   ScoreBug:
     type: application
@@ -22,7 +23,8 @@ targets:
       - target: ScoreBugWidgets
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.example.scorebug
+        PRODUCT_BUNDLE_IDENTIFIER: com.jeffmchale.scorebug
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
     info:
       path: ScoreBug/Info.plist
       properties:
@@ -33,21 +35,28 @@ targets:
         NSAppTransportSecurity:
           NSAllowsLocalNetworking: true
         UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        ITSAppUsesNonExemptEncryption: false
+        NSLocalNetworkUsageDescription: Score Bug connects to your score server when it runs on your own network.
         CFBundleURLTypes:
-          - CFBundleURLName: com.example.scorebug
+          - CFBundleURLName: com.jeffmchale.scorebug
             CFBundleURLSchemes: [scorebug]
     entitlements:
       path: ScoreBug/ScoreBug.entitlements
       properties:
         aps-environment: development
-        com.apple.security.application-groups: [group.com.example.scorebug]
+        com.apple.security.application-groups: [group.com.jeffmchale.scorebug]
   ScoreBugWidgets:
     type: app-extension
     platform: iOS
     sources: [ScoreBugWidgets, Shared]
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.example.scorebug.widgets
+        PRODUCT_BUNDLE_IDENTIFIER: com.jeffmchale.scorebug.widgets
     info:
       path: ScoreBugWidgets/Info.plist
       properties:
@@ -59,7 +68,7 @@ targets:
     entitlements:
       path: ScoreBugWidgets/ScoreBugWidgets.entitlements
       properties:
-        com.apple.security.application-groups: [group.com.example.scorebug]
+        com.apple.security.application-groups: [group.com.jeffmchale.scorebug]
 schemes:
   ScoreBug:
     build:

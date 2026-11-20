@@ -58,9 +58,7 @@ Mac. Pick a league, open a game, tap **Put on Lock Screen**, then lock the simul
 (Cmd+L). While the app is open it updates the Live Activity itself, so this works with no
 Apple push key.
 
-For a real phone: replace `com.example.scorebug` in `ios/project.yml` and
-`ios/Shared/SharedSettings.swift` with your own bundle ID, set your team in Xcode, and
-enter your Mac's address in the app's Settings tab. Updates with the app closed, and bugs
+For a real device, enter the server's address in the app's Settings tab. Updates with the app closed, and bugs
 that appear by themselves before a favorite team's game, need the paid Apple Developer
 Program and the APNs variables above.
 
