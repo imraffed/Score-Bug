@@ -1,0 +1,415 @@
+[
+ {
+  "id": "401922022",
+  "uid": "s:40~l:41~e:401922022",
+  "date": "2026-11-20T21:00Z",
+  "name": "South Dakota State Jackrabbits at Idaho State Bengals",
+  "shortName": "SDST @ IDST",
+  "season": {
+   "year": 2027,
+   "type": 2,
+   "slug": "regular-season"
+  },
+  "competitions": [
+   {
+    "id": "401922022",
+    "uid": "s:40~l:41~e:401922022~c:401922022",
+    "date": "2026-11-20T21:00Z",
+    "attendance": 0,
+    "type": {
+     "id": "1",
+     "abbreviation": "STD"
+    },
+    "timeValid": true,
+    "neutralSite": false,
+    "conferenceCompetition": false,
+    "playByPlayAvailable": false,
+    "recent": true,
+    "competitors": [
+     {
+      "id": "304",
+      "uid": "s:40~l:41~t:304",
+      "type": "team",
+      "order": 0,
+      "homeAway": "home",
+      "team": {
+       "id": "304",
+       "uid": "s:40~l:41~t:304",
+       "location": "Idaho State",
+       "name": "Bengals",
+       "abbreviation": "IDST",
+       "displayName": "Idaho State Bengals",
+       "shortDisplayName": "Idaho St",
+       "color": "ef8c00",
+       "alternateColor": "e9a126",
+       "isActive": true,
+       "venue": {
+        "id": "1904"
+       },
+       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/304.png",
+       "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/304.png",
+       "conferenceId": "5"
+      },
+      "score": "0",
+      "curatedRank": {
+       "current": 99
+      }
+     },
+     {
+      "id": "2571",
+      "uid": "s:40~l:41~t:2571",
+      "type": "team",
+      "order": 1,
+      "homeAway": "away",
+      "team": {
+       "id": "2571",
+       "uid": "s:40~l:41~t:2571",
+       "location": "South Dakota State",
+       "name": "Jackrabbits",
+       "abbreviation": "SDST",
+       "displayName": "South Dakota State Jackrabbits",
+       "shortDisplayName": "S Dakota St",
+       "color": "0033a0",
+       "alternateColor": "ffd100",
+       "isActive": true,
+       "venue": {
+        "id": "10796"
+       },
+       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2571.png",
+       "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2571.png",
+       "conferenceId": "49"
+      },
+      "score": "0",
+      "curatedRank": {
+       "current": 99
+      }
+     }
+    ],
+    "status": {
+     "clock": 0,
+     "displayClock": "0:00",
+     "period": 0,
+     "type": {
+      "id": "1",
+      "name": "STATUS_SCHEDULED",
+      "state": "pre",
+      "completed": false,
+      "description": "Scheduled",
+      "detail": "Fri, November 20th at 4:00 PM EST",
+      "shortDetail": "11/20 - 4:00 PM EST"
+     }
+    },
+    "format": {
+     "regulation": {
+      "periods": 2
+     }
+    },
+    "startDate": "2026-11-20T21:00Z",
+    "broadcast": "ESPN+"
+   }
+  ],
+  "status": {
+   "clock": 0,
+   "displayClock": "0:00",
+   "period": 0,
+   "type": {
+    "id": "1",
+    "name": "STATUS_SCHEDULED",
+    "state": "pre",
+    "completed": false,
+    "description": "Scheduled",
+    "detail": "Fri, November 20th at 4:00 PM EST",
+    "shortDetail": "11/20 - 4:00 PM EST"
+   }
+  }
+ },
+ {
+  "id": "401919019",
+  "uid": "s:40~l:41~e:401919019",
+  "date": "2026-11-20T19:00Z",
+  "name": "UAB Blazers at George Washington Revolutionaries",
+  "shortName": "UAB VS GW",
+  "season": {
+   "year": 2027,
+   "type": 2,
+   "slug": "regular-season"
+  },
+  "competitions": [
+   {
+    "id": "401919019",
+    "uid": "s:40~l:41~e:401919019~c:401919019",
+    "date": "2026-11-20T19:00Z",
+    "attendance": 0,
+    "type": {
+     "id": "1",
+     "abbreviation": "STD"
+    },
+    "timeValid": true,
+    "neutralSite": true,
+    "conferenceCompetition": false,
+    "playByPlayAvailable": true,
+    "recent": true,
+    "competitors": [
+     {
+      "id": "45",
+      "uid": "s:40~l:41~t:45",
+      "type": "team",
+      "order": 0,
+      "homeAway": "home",
+      "team": {
+       "id": "45",
+       "uid": "s:40~l:41~t:45",
+       "location": "George Washington",
+       "name": "Revolutionaries",
+       "abbreviation": "GW",
+       "displayName": "George Washington Revolutionaries",
+       "shortDisplayName": "G Washington",
+       "color": "002843",
+       "alternateColor": "e8d2a1",
+       "isActive": true,
+       "venue": {
+        "id": "2125"
+       },
+       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/45.png",
+       "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/45.png",
+       "conferenceId": "3"
+      },
+      "score": "38",
+      "curatedRank": {
+       "current": 99
+      }
+     },
+     {
+      "id": "5",
+      "uid": "s:40~l:41~t:5",
+      "type": "team",
+      "order": 1,
+      "homeAway": "away",
+      "team": {
+       "id": "5",
+       "uid": "s:40~l:41~t:5",
+       "location": "UAB",
+       "name": "Blazers",
+       "abbreviation": "UAB",
+       "displayName": "UAB Blazers",
+       "shortDisplayName": "UAB",
+       "color": "1a5632",
+       "alternateColor": "fdb913",
+       "isActive": true,
+       "venue": {
+        "id": "2155"
+       },
+       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/5.png",
+       "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/5.png",
+       "conferenceId": "62"
+      },
+      "score": "45",
+      "curatedRank": {
+       "current": 99
+      }
+     }
+    ],
+    "situation": {
+     "lastPlay": {
+      "id": "401919019121674754",
+      "type": {
+       "id": "574",
+       "text": "DunkShot"
+      },
+      "text": "Dylan James makes 6-foot alley oop dunk (Jean Aranguren assists)",
+      "scoreValue": 2,
+      "team": {
+       "id": "45"
+      },
+      "probability": {
+       "tiePercentage": 0,
+       "homeWinPercentage": 0.337,
+       "awayWinPercentage": 0.663
+      },
+      "athletesInvolved": [
+       {
+        "id": "4895794",
+        "fullName": "Dylan James",
+        "displayName": "Dylan James",
+        "shortName": "D. James",
+        "links": [
+         {
+          "rel": [
+           "playercard",
+           "desktop",
+           "athlete"
+          ],
+          "href": "https://www.espn.com/mens-college-basketball/player/_/id/4895794/dylan-james"
+         }
+        ],
+        "headshot": "https://a.espncdn.com/i/headshots/mens-college-basketball/players/full/4895794.png",
+        "jersey": "11",
+        "position": "F",
+        "team": {
+         "id": "45"
+        }
+       }
+      ]
+     }
+    },
+    "status": {
+     "clock": 1071,
+     "displayClock": "17:51",
+     "period": 2,
+     "type": {
+      "id": "2",
+      "name": "STATUS_IN_PROGRESS",
+      "state": "in",
+      "completed": false,
+      "description": "In Progress",
+      "detail": "17:51 - 2nd Half",
+      "shortDetail": "17:51 - 2nd"
+     }
+    },
+    "format": {
+     "regulation": {
+      "periods": 2
+     }
+    },
+    "startDate": "2026-11-20T19:00Z",
+    "broadcast": "CBSSN"
+   }
+  ],
+  "status": {
+   "clock": 1071,
+   "displayClock": "17:51",
+   "period": 2,
+   "type": {
+    "id": "2",
+    "name": "STATUS_IN_PROGRESS",
+    "state": "in",
+    "completed": false,
+    "description": "In Progress",
+    "detail": "17:51 - 2nd Half",
+    "shortDetail": "17:51 - 2nd"
+   }
+  }
+ },
+ {
+  "id": "401918454",
+  "uid": "s:40~l:41~e:401918454",
+  "date": "2026-11-20T16:00Z",
+  "name": "Averett Cougars at William & Mary Tribe",
+  "shortName": "AVER @ W&M",
+  "season": {
+   "year": 2027,
+   "type": 2,
+   "slug": "regular-season"
+  },
+  "competitions": [
+   {
+    "id": "401918454",
+    "uid": "s:40~l:41~e:401918454~c:401918454",
+    "date": "2026-11-20T16:00Z",
+    "attendance": 3271,
+    "type": {
+     "id": "1",
+     "abbreviation": "STD"
+    },
+    "timeValid": true,
+    "neutralSite": false,
+    "conferenceCompetition": false,
+    "playByPlayAvailable": true,
+    "recent": true,
+    "competitors": [
+     {
+      "id": "2729",
+      "uid": "s:40~l:41~t:2729",
+      "type": "team",
+      "order": 0,
+      "homeAway": "home",
+      "winner": true,
+      "team": {
+       "id": "2729",
+       "uid": "s:40~l:41~t:2729",
+       "location": "William & Mary",
+       "name": "Tribe",
+       "abbreviation": "W&M",
+       "displayName": "William & Mary Tribe",
+       "shortDisplayName": "William & Mary",
+       "color": "115740",
+       "alternateColor": "f0b323",
+       "isActive": true,
+       "venue": {
+        "id": "2200"
+       },
+       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2729.png",
+       "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2729.png",
+       "conferenceId": "10"
+      },
+      "score": "85",
+      "curatedRank": {
+       "current": 99
+      }
+     },
+     {
+      "id": "2047",
+      "uid": "s:40~l:41~t:2047",
+      "type": "team",
+      "order": 1,
+      "homeAway": "away",
+      "winner": false,
+      "team": {
+       "id": "2047",
+       "uid": "s:40~l:41~t:2047",
+       "location": "Averett",
+       "name": "Cougars",
+       "abbreviation": "AVER",
+       "displayName": "Averett Cougars",
+       "shortDisplayName": "Averett",
+       "color": "012853",
+       "alternateColor": "fdbb30",
+       "isActive": false,
+       "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2047.png",
+       "logoDark": "https://a.espncdn.com/i/teamlogos/ncaa/500-dark/2047.png"
+      },
+      "score": "39",
+      "curatedRank": {
+       "current": 99
+      }
+     }
+    ],
+    "status": {
+     "clock": 0,
+     "displayClock": "0:00",
+     "period": 2,
+     "type": {
+      "id": "3",
+      "name": "STATUS_FINAL",
+      "state": "post",
+      "completed": true,
+      "description": "Final",
+      "detail": "Final",
+      "shortDetail": "Final"
+     }
+    },
+    "format": {
+     "regulation": {
+      "periods": 2
+     }
+    },
+    "startDate": "2026-11-20T16:00Z",
+    "broadcast": ""
+   }
+  ],
+  "status": {
+   "clock": 0,
+   "displayClock": "0:00",
+   "period": 2,
+   "type": {
+    "id": "3",
+    "name": "STATUS_FINAL",
+    "state": "post",
+    "completed": true,
+    "description": "Final",
+    "detail": "Final",
+    "shortDetail": "Final"
+   }
+  }
+ }
+]

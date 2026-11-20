@@ -1,0 +1,62 @@
+# Generate the Xcode project with:  brew install xcodegen && xcodegen
+# Before running on a real phone, replace com.example.scorebug everywhere in this
+# file and in Shared/SharedSettings.swift with your own bundle ID, and set your team.
+name: ScoreBug
+options:
+  bundleIdPrefix: com.example
+  deploymentTarget:
+    iOS: "17.2"
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    DEVELOPMENT_TEAM: ""
+    MARKETING_VERSION: "0.1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    TARGETED_DEVICE_FAMILY: "1"
+targets:
+  ScoreBug:
+    type: application
+    platform: iOS
+    sources: [ScoreBug, Shared]
+    dependencies:
+      - target: ScoreBugWidgets
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.scorebug
+    info:
+      path: ScoreBug/Info.plist
+      properties:
+        CFBundleDisplayName: Score Bug
+        UILaunchScreen: {}
+        NSSupportsLiveActivities: true
+        NSSupportsLiveActivitiesFrequentUpdates: true
+        NSAppTransportSecurity:
+          NSAllowsLocalNetworking: true
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+        CFBundleURLTypes:
+          - CFBundleURLName: com.example.scorebug
+            CFBundleURLSchemes: [scorebug]
+    entitlements:
+      path: ScoreBug/ScoreBug.entitlements
+      properties:
+        aps-environment: development
+        com.apple.security.application-groups: [group.com.example.scorebug]
+  ScoreBugWidgets:
+    type: app-extension
+    platform: iOS
+    sources: [ScoreBugWidgets, Shared]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.scorebug.widgets
+    info:
+      path: ScoreBugWidgets/Info.plist
+      properties:
+        CFBundleDisplayName: Score Bug
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
+        NSAppTransportSecurity:
+          NSAllowsLocalNetworking: true
+    entitlements:
+      path: ScoreBugWidgets/ScoreBugWidgets.entitlements
+      properties:
+        com.apple.security.application-groups: [group.com.example.scorebug]
