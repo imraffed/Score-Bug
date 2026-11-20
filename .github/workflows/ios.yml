@@ -1,0 +1,30 @@
+name: iOS build
+on:
+  push:
+    paths: ['ios/**', '.github/workflows/ios.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ios-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: macos-15
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate Xcode project
+        run: |
+          brew install xcodegen
+          cd ios && xcodegen
+      - name: Build for the iOS Simulator
+        run: |
+          cd ios
+          status=0
+          xcodebuild -project ScoreBug.xcodeproj -scheme ScoreBug -configuration Debug \
+            -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' \
+            -derivedDataPath build CODE_SIGNING_ALLOWED=NO build > build.log 2>&1 || status=$?
+          grep -E "error:|BUILD SUCCEEDED|BUILD FAILED" build.log | sort -u || true
+          if [ "$status" -ne 0 ]; then tail -n 40 build.log; fi
+          exit $status

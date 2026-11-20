@@ -60,3 +60,10 @@ targets:
       path: ScoreBugWidgets/ScoreBugWidgets.entitlements
       properties:
         com.apple.security.application-groups: [group.com.example.scorebug]
+schemes:
+  ScoreBug:
+    build:
+      targets:
+        ScoreBug: all
+    run:
+      config: Debug
